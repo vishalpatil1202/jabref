@@ -37,6 +37,7 @@ Note that this project **does not** adhere to [Semantic Versioning](http://semve
 - We integrated two mail actions ("As Email" and "To Kindle") under a new "Send" option in the right-click & Tools menus. The Kindle option creates an email targeted to the user's Kindle email, which can be set in preferences under "External programs" [#6186](https://github.com/JabRef/jabref/issues/6186)
 - We added an option to clear recent libraries' history. [#10003](https://github.com/JabRef/jabref/issues/10003)
 - We added an option to encrypt and remember the proxy password. [#8055](https://github.com/JabRef/jabref/issues/8055)[#10044](https://github.com/JabRef/jabref/issues/10044)
+- We added support for pushing citations to Sublime Text 3 [#10098](https://github.com/JabRef/jabref/issues/10098)
 
 ### Changed
 
@@ -74,9 +75,12 @@ Note that this project **does not** adhere to [Semantic Versioning](http://semve
 - In the context of the "systematic literature functionality", we changed the name "database" to "catalog" to use a separate term for online catalogs in comparison to SQL databases. [#9951](https://github.com/JabRef/jabref/pull/9951)
 - We now show more fields (including Special Fields) in the dropdown selection for "Save sort order" in the library properties and for "Export sort order" in the preferences. [#10010](https://github.com/JabRef/jabref/issues/10010)
 - We now encrypt and store the custom API keys in the OS native credential store. [#10044](https://github.com/JabRef/jabref/issues/10044)
+- We changed the behavior of group addition/edit, so that sorting by alphabetical order is not performed by default after the modification [#10017](https://github.com/JabRef/jabref/issues/10017)
+- We fixed an issue with spacing in the cleanup dialogue. [#10081](https://github.com/JabRef/jabref/issues/10081)
 
 ### Fixed
 
+- We fixed an issue where clicking the group expansion pane/arrow caused the node to be selected, when it should just expand/detract the node - [#10111](https://github.com/JabRef/jabref/pull/10111)
 - We fixed an issue where the browser import would add ' characters before the BibTeX entry on Linux. [#9588](https://github.com/JabRef/jabref/issues/9588)
 - We fixed an issue where searching for a specific term with the DOAB fetcher lead to an exception. [#9571](https://github.com/JabRef/jabref/issues/9571)
 - We fixed an issue where the "Import" -> "Library to import to" did not show the correct library name if two opened libraries had the same suffix. [#9567](https://github.com/JabRef/jabref/issues/9567)
@@ -117,6 +121,10 @@ Note that this project **does not** adhere to [Semantic Versioning](http://semve
 - We fixed an issue where empty grey containers would remain in the groups panel, if displaying of group item count is turned off. [#9972](https://github.com/JabRef/jabref/issues/9972)
 - We fixed an issue where fetching an ISBN could lead to application freezing when the fetcher did not return any results. [#9979](https://github.com/JabRef/jabref/issues/9979)
 - We fixed an issue where closing a library containing groups and entries caused an exception [#9997](https://github.com/JabRef/jabref/issues/9997)
+- We fixed a bug where the editor for strings in a bibliography file did not sort the entries by their keys [#10083](https://github.com/JabRef/jabref/pull/10083)
+- We fixed an issues where clicking on the empty space of specific context menu entries would not trigger the associated action. [#8388](https://github.com/JabRef/jabref/issues/8388)
+- We fixed an issue where JabRef would not remember if the window was in fullscreen or not [#4939](https://github.com/JabRef/jabref/issues/4939)
+- We fixed an issue where the ACM Portal search sometimes would not return entries for some search queries when the article author had no given name [#10107](https://github.com/JabRef/jabref/issues/10107)
 
 ### Removed
 
